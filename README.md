@@ -34,6 +34,10 @@ async def dado(ctx, lados: int = 6):
 async def hora(ctx):
     ahora = datetime.datetime.now().strftime("%H:%M:%S")
     await ctx.send(f'⏰ La hora actual es: {ahora}')
-
+# Comando de suerte 🍀
+@bot.command()
+async def suerte(ctx):
+    numero = random.randint(1, 100)
+    await ctx.send(f'🍀 Tu nivel de suerte es: {numero}%')
 
 bot.run("PON TU TOKEN")
